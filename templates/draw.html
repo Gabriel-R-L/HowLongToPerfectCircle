@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ translations.draw.title }}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/draw.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="draw-container">
+    <h1>{{ translations.draw.title }}</h1>
+    <p class="instructions">{{ translations.draw.instructions }}</p>
+    
+    <div class="canvas-container">
+        <canvas id="drawingCanvas" width="400" height="400"></canvas>
+        <div class="canvas-overlay" id="canvasOverlay">
+            <div class="result-container" id="resultContainer">
+                <h2 id="resultTitle">{{ translations.draw.analyzing }}</h2>
+                <p id="resultText">{{ translations.draw.calculating }}</p>
+                <div class="similarity-meter">
+                    <div class="similarity-bar" id="similarityBar"></div>
+                    <span class="similarity-text" id="similarityText">0%</span>
+                </div>
+                <div class="buttons">
+                    <button id="tryAgainBtn" class="btn">{{ translations.draw.try_again }}</button>
+                    <a href="{{ url_for('results') }}" class="btn">{{ translations.draw.see_results }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="clearBtn" class="btn">{{ translations.draw.clear_button }}</button>
+        <button id="submitBtn" class="btn primary">{{ translations.draw.submit_button }}</button>
+    </div>
+    
+    <div class="attempts-counter">
+        <span>{{ translations.draw.attempt }}: </span>
+        <span id="attemptCount">1</span>
+    </div>
+    
+    <a href="{{ url_for('index') }}" class="back-link">← {{ translations.draw.back_link }}</a>
+</div>
+
+<script>
+    // Make translations available to JavaScript
+    const translations = {{ translations|tojson|safe }};
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/draw.js') }}"></script>
+{% endblock %}

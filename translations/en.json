@@ -1,0 +1,63 @@
+{
+  "app_title": "HLTPC: How Long To Perfect Circle",
+  "intro": {
+    "title": "How Long To Perfect Circle?",
+    "subtitle": "Can you draw a perfect circle freehand?",
+    "scroll_down": "Scroll Down"
+  },
+  "question": {
+    "title": "The Question",
+    "content": "How many attempts does it take for a human to draw a perfect circle using only a pencil, without any tools?"
+  },
+  "challenge": {
+    "title": "The Challenge",
+    "content": "Drawing a perfect circle is harder than it seems. Most people need multiple attempts to get close."
+  },
+  "stats": {
+    "title": "The Statistics",
+    "total_attempts": "Total Attempts",
+    "success_rate": "Success Rate",
+    "avg_similarity": "Average Similarity"
+  },
+  "cta": {
+    "title": "Ready to Try?",
+    "content": "See how many attempts it takes you to draw a perfect circle.",
+    "start_button": "Start Drawing"
+  },
+  "draw": {
+    "title": "Draw a Perfect Circle",
+    "instructions": "Use your mouse or finger to draw a circle in the canvas below.",
+    "clear_button": "Clear",
+    "submit_button": "Submit",
+    "attempt": "Attempt",
+    "back_link": "Back to Home",
+    "analyzing": "Analyzing...",
+    "calculating": "Calculating similarity to a perfect circle.",
+    "perfect_circle": "Perfect Circle!",
+    "congrats": "Congratulations! You drew a near-perfect circle.",
+    "almost_there": "Almost There!",
+    "almost_message": "Your circle is good, but not quite perfect yet.",
+    "keep_practicing": "Keep Practicing!",
+    "practice_message": "Drawing a perfect circle is harder than it seems.",
+    "try_again": "Try Again",
+    "see_results": "See Results"
+  },
+  "results": {
+    "title": "Your Results",
+    "your_attempts": "Your Attempts",
+    "best_similarity": "Best Similarity",
+    "success": "Success",
+    "not_yet": "Not Yet",
+    "yes": "Yes!",
+    "global_stats": "Global Statistics",
+    "total_attempts": "Total Attempts",
+    "success_rate": "Success Rate",
+    "avg_similarity": "Average Similarity",
+    "unique_locations": "Unique Locations",
+    "try_again": "Try Again",
+    "back_home": "Back to Home"
+  },
+  "language_selector": {
+    "language": "Language"
+  }
+}

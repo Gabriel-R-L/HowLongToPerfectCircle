@@ -1,0 +1,70 @@
+/* Flag icons styles */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.flag-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.flag.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Tooltip styles */
+.flag .tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.flag:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .language-selector {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .flag {
+        width: 25px;
+        height: 16px;
+    }
+}

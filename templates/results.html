@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}{{ translations.results.title }} - {{ translations.app_title }}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="results-container">
+    <h1>{{ translations.results.title }}</h1>
+    
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>{{ translations.results.your_attempts }}</h3>
+            <div class="stat-value" id="userAttempts">0</div>
+        </div>
+        
+        <div class="stat-card">
+            <h3>{{ translations.results.best_similarity }}</h3>
+            <div class="stat-value" id="bestSimilarity">0%</div>
+        </div>
+        
+        <div class="stat-card">
+            <h3>{{ translations.results.success }}</h3>
+            <div class="stat-value" id="userSuccess">{{ translations.results.not_yet }}</div>
+        </div>
+    </div>
+    
+    <div class="global-stats">
+        <h2>{{ translations.results.global_stats }}</h2>
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="stat-label">{{ translations.results.total_attempts }}</span>
+                <span class="stat-number" id="totalAttempts">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">{{ translations.results.success_rate }}</span>
+                <span class="stat-number" id="successRate">0%</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">{{ translations.results.avg_similarity }}</span>
+                <span class="stat-number" id="avgSimilarity">0%</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">{{ translations.results.unique_locations }}</span>
+                <span class="stat-number" id="uniqueLocations">0</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="action-buttons">
+        <a href="{{ url_for('draw') }}" class="btn primary">{{ translations.results.try_again }}</a>
+        <a href="{{ url_for('index') }}" class="btn">{{ translations.results.back_home }}</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Make translations available to JavaScript
+    const translations = {{ translations|tojson|safe }};
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get user's attempts from localStorage
+        const userAttempts = localStorage.getItem('userAttempts') || 0;
+        const bestSimilarity = localStorage.getItem('bestSimilarity') || 0;
+        const hasSucceeded = localStorage.getItem('hasSucceeded') === 'true';
+        
+        // Update user stats
+        document.getElementById('userAttempts').textContent = userAttempts;
+        document.getElementById('bestSimilarity').textContent = bestSimilarity + '%';
+        document.getElementById('userSuccess').textContent = hasSucceeded ? translations.results.yes : translations.results.not_yet;
+        
+        // Fetch global stats
+        fetch('/api/stats')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('totalAttempts').textContent = data.total_attempts;
+                document.getElementById('successRate').textContent = 
+                    data.total_attempts > 0 
+                        ? Math.round((data.successful_attempts / data.total_attempts) * 100) + '%' 
+                        : '0%';
+                document.getElementById('avgSimilarity').textContent = 
+                    Math.round(data.avg_similarity) + '%';
+                document.getElementById('uniqueLocations').textContent = 
+                    data.unique_locations || 0;
+            })
+            .catch(error => console.error('Error fetching stats:', error));
+    });
+</script>
+{% endblock %}

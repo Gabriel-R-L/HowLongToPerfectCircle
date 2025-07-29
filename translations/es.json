@@ -1,0 +1,63 @@
+{
+  "app_title": "HLTPC: How Long To Perfect Circle",
+  "intro": {
+    "title": "¿Cuánto Tiempo Para Un Círculo Perfecto?",
+    "subtitle": "¿Puedes dibujar un círculo perfecto a mano alzada?",
+    "scroll_down": "Desplázate Hacia Abajo"
+  },
+  "question": {
+    "title": "La Pregunta",
+    "content": "¿Cuántos intentos necesita un humano para dibujar un círculo perfecto usando solo un lápiz, sin ninguna herramienta?"
+  },
+  "challenge": {
+    "title": "El Desafío",
+    "content": "Dibujar un círculo perfecto es más difícil de lo que parece. La mayoría de las personas necesitan múltiples intentos para acercarse."
+  },
+  "stats": {
+    "title": "Las Estadísticas",
+    "total_attempts": "Intentos Totales",
+    "success_rate": "Tasa de Éxito",
+    "avg_similarity": "Similitud Promedio"
+  },
+  "cta": {
+    "title": "¿Listo para Intentarlo?",
+    "content": "Mira cuántos intentos te lleva dibujar un círculo perfecto.",
+    "start_button": "Empezar a Dibujar"
+  },
+  "draw": {
+    "title": "Dibuja un Círculo Perfecto",
+    "instructions": "Usa tu ratón o dedo para dibujar un círculo en el lienzo de abajo.",
+    "clear_button": "Borrar",
+    "submit_button": "Enviar",
+    "attempt": "Intento",
+    "back_link": "Volver al Inicio",
+    "analyzing": "Analizando...",
+    "calculating": "Calculando similitud con un círculo perfecto.",
+    "perfect_circle": "¡Círculo Perfecto!",
+    "congrats": "¡Felicidades! Dibujaste un círculo casi perfecto.",
+    "almost_there": "¡Casi lo Logras!",
+    "almost_message": "Tu círculo es bueno, pero aún no es perfecto.",
+    "keep_practicing": "¡Sigue Practicando!",
+    "practice_message": "Dibujar un círculo perfecto es más difícil de lo que parece.",
+    "try_again": "Intentar de Nuevo",
+    "see_results": "Ver Resultados"
+  },
+  "results": {
+    "title": "Tus Resultados",
+    "your_attempts": "Tus Intentos",
+    "best_similarity": "Mejor Similitud",
+    "success": "Éxito",
+    "not_yet": "Aún No",
+    "yes": "¡Sí!",
+    "global_stats": "Estadísticas Globales",
+    "total_attempts": "Intentos Totales",
+    "success_rate": "Tasa de Éxito",
+    "avg_similarity": "Similitud Promedio",
+    "unique_locations": "Ubicaciones Únicas",
+    "try_again": "Intentar de Nuevo",
+    "back_home": "Volver al Inicio"
+  },
+  "language_selector": {
+    "language": "Idioma"
+  }
+}

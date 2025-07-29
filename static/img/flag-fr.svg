@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+  <!-- French Flag (Tricolor) -->
+  <rect width="20" height="40" fill="#002395"/>
+  <rect width="20" height="40" x="20" fill="#ffffff"/>
+  <rect width="20" height="40" x="40" fill="#ed2939"/>
+</svg>

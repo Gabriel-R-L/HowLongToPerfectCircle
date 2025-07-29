@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}{{ translations.app_title }}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="scroll-container">
+    <section class="section intro">
+        <div class="content">
+            <h1>{{ translations.intro.title }}</h1>
+            <p>{{ translations.intro.subtitle }}</p>
+            <div class="scroll-indicator">{{ translations.intro.scroll_down }}</div>
+        </div>
+    </section>
+    
+    <section class="section question">
+        <div class="content">
+            <h2>{{ translations.question.title }}</h2>
+            <p>{{ translations.question.content }}</p>
+        </div>
+    </section>
+    
+    <section class="section challenge">
+        <div class="content">
+            <h2>{{ translations.challenge.title }}</h2>
+            <p>{{ translations.challenge.content }}</p>
+            <div class="circle-animation"></div>
+        </div>
+    </section>
+    
+    <section class="section stats">
+        <div class="content">
+            <h2>{{ translations.stats.title }}</h2>
+            <div id="stats-container">
+                <div class="stat">
+                    <span class="stat-number" id="total-attempts">0</span>
+                    <span class="stat-label">{{ translations.stats.total_attempts }}</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="success-rate">0%</span>
+                    <span class="stat-label">{{ translations.stats.success_rate }}</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="avg-similarity">0%</span>
+                    <span class="stat-label">{{ translations.stats.avg_similarity }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section cta">
+        <div class="content">
+            <h2>{{ translations.cta.title }}</h2>
+            <p>{{ translations.cta.content }}</p>
+            <a href="{{ url_for('draw') }}" class="btn">{{ translations.cta.start_button }}</a>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script>
+    // Fetch stats when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/api/stats')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('total-attempts').textContent = data.total_attempts;
+                document.getElementById('success-rate').textContent = 
+                    data.total_attempts > 0 
+                        ? Math.round((data.successful_attempts / data.total_attempts) * 100) + '%' 
+                        : '0%';
+                document.getElementById('avg-similarity').textContent = 
+                    Math.round(data.avg_similarity) + '%';
+            })
+            .catch(error => console.error('Error fetching stats:', error));
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,63 @@
+{
+  "app_title": "HLTPC: How Long To Perfect Circle",
+  "intro": {
+    "title": "Combien de Temps Pour un Cercle Parfait ?",
+    "subtitle": "Pouvez-vous dessiner un cercle parfait à main levée ?",
+    "scroll_down": "Défiler vers le bas"
+  },
+  "question": {
+    "title": "La Question",
+    "content": "Combien de tentatives faut-il à un humain pour dessiner un cercle parfait en utilisant uniquement un crayon, sans aucun outil ?"
+  },
+  "challenge": {
+    "title": "Le Défi",
+    "content": "Dessiner un cercle parfait est plus difficile qu'il n'y paraît. La plupart des gens ont besoin de plusieurs tentatives pour s'en approcher."
+  },
+  "stats": {
+    "title": "Les Statistiques",
+    "total_attempts": "Tentatives Totales",
+    "success_rate": "Taux de Réussite",
+    "avg_similarity": "Similarité Moyenne"
+  },
+  "cta": {
+    "title": "Prêt à Essayer ?",
+    "content": "Voyez combien de tentatives il vous faut pour dessiner un cercle parfait.",
+    "start_button": "Commencer à Dessiner"
+  },
+  "draw": {
+    "title": "Dessinez un Cercle Parfait",
+    "instructions": "Utilisez votre souris ou votre doigt pour dessiner un cercle sur le canevas ci-dessous.",
+    "clear_button": "Effacer",
+    "submit_button": "Soumettre",
+    "attempt": "Tentative",
+    "back_link": "Retour à l'Accueil",
+    "analyzing": "Analyse en cours...",
+    "calculating": "Calcul de la similarité avec un cercle parfait.",
+    "perfect_circle": "Cercle Parfait !",
+    "congrats": "Félicitations ! Vous avez dessiné un cercle presque parfait.",
+    "almost_there": "Presque Parfait !",
+    "almost_message": "Votre cercle est bon, mais pas encore tout à fait parfait.",
+    "keep_practicing": "Continuez à Pratiquer !",
+    "practice_message": "Dessiner un cercle parfait est plus difficile qu'il n'y paraît.",
+    "try_again": "Réessayer",
+    "see_results": "Voir les Résultats"
+  },
+  "results": {
+    "title": "Vos Résultats",
+    "your_attempts": "Vos Tentatives",
+    "best_similarity": "Meilleure Similarité",
+    "success": "Réussite",
+    "not_yet": "Pas Encore",
+    "yes": "Oui !",
+    "global_stats": "Statistiques Globales",
+    "total_attempts": "Tentatives Totales",
+    "success_rate": "Taux de Réussite",
+    "avg_similarity": "Similarité Moyenne",
+    "unique_locations": "Emplacements Uniques",
+    "try_again": "Réessayer",
+    "back_home": "Retour à l'Accueil"
+  },
+  "language_selector": {
+    "language": "Langue"
+  }
+}

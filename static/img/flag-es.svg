@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+  <!-- Spanish Flag -->
+  <rect width="60" height="40" fill="#c60b1e"/>
+  <rect width="60" height="20" y="10" fill="#ffc400"/>
+  <!-- Simplified coat of arms -->
+  <g transform="translate(20,15) scale(0.15)">
+    <circle cx="60" cy="60" r="40" fill="#ffc400" stroke="#c60b1e" stroke-width="2"/>
+    <path d="M40,40 L80,40 L80,80 L40,80 Z" fill="#c60b1e"/>
+    <path d="M50,50 L70,50 L70,70 L50,70 Z" fill="#ffc400"/>
+  </g>
+</svg>
